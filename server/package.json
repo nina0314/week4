@@ -1,0 +1,22 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "week 5 3813ICT",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nina0314/week4.git"
+  },
+  "author": "Nina Nielsen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nina0314/week4/issues"
+  },
+  "homepage": "https://github.com/nina0314/week4#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

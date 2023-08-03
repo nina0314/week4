@@ -8,7 +8,7 @@
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand active" routerLink="/"> Home</a>
+  <a class="navbar-brand active" routerLink="/" > Home</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -16,20 +16,23 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link" routerLink="/login"> Login </a>
+        <a class="nav-link" routerLink="/login" (click)="userLog()"> Login </a>
       </li>
       <li class="nav-item">
         <a class="nav-link" routerLink="/account"> Account </a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/profile"> Profile </a>
+      </li>
+      <ng-container *ngIf="isLoggedIn()">
+          <li class="nav-item" *ngIf="isLoggedIn()">
+            <button type="submit" class="btn btn-primary" (click)="logOut()" > LogOut</button>
+          </li>
+        </ng-container>
     </ul>
   </div>
 </nav>
 
  
     <router-outlet>
-      <div class="container">
-      <h1> <b> Login Here: </b> </h1>
-      <button class="btn btn-lg btn-primary btn-block text-uppercase" (click)="navByUrl('login')"> Login </button>
-    </div>
-
     </router-outlet>
